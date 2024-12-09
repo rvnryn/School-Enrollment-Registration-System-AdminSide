@@ -1,0 +1,332 @@
+﻿namespace CourseManagament
+{
+    partial class Frm_Student
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.Dashboard_Panel = new System.Windows.Forms.Panel();
+            this.Btn_Logout = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Btn_Billing = new System.Windows.Forms.Label();
+            this.Btn_Dashboard = new System.Windows.Forms.Label();
+            this.Btn_Courses = new System.Windows.Forms.Label();
+            this.Btn_Student = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Lbl_Student = new System.Windows.Forms.Label();
+            this.Lbl_Enrolled_Student = new System.Windows.Forms.Label();
+            this.Lbl_New_Student = new System.Windows.Forms.Label();
+            this.New_Student_Applicaton_Panel = new System.Windows.Forms.Panel();
+            this.Enrolled_Student_panel = new System.Windows.Forms.Panel();
+            this.Dashboard_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.New_Student_Applicaton_Panel.SuspendLayout();
+            this.Enrolled_Student_panel.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // Dashboard_Panel
+            // 
+            this.Dashboard_Panel.Controls.Add(this.Btn_Logout);
+            this.Dashboard_Panel.Controls.Add(this.pictureBox6);
+            this.Dashboard_Panel.Controls.Add(this.pictureBox5);
+            this.Dashboard_Panel.Controls.Add(this.pictureBox4);
+            this.Dashboard_Panel.Controls.Add(this.pictureBox3);
+            this.Dashboard_Panel.Controls.Add(this.label3);
+            this.Dashboard_Panel.Controls.Add(this.label4);
+            this.Dashboard_Panel.Controls.Add(this.Btn_Billing);
+            this.Dashboard_Panel.Controls.Add(this.Btn_Dashboard);
+            this.Dashboard_Panel.Controls.Add(this.Btn_Courses);
+            this.Dashboard_Panel.Controls.Add(this.Btn_Student);
+            this.Dashboard_Panel.Location = new System.Drawing.Point(-5, 99);
+            this.Dashboard_Panel.Name = "Dashboard_Panel";
+            this.Dashboard_Panel.Size = new System.Drawing.Size(220, 1021);
+            this.Dashboard_Panel.TabIndex = 22;
+            // 
+            // Btn_Logout
+            // 
+            this.Btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Btn_Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Logout.Location = new System.Drawing.Point(77, 537);
+            this.Btn_Logout.Name = "Btn_Logout";
+            this.Btn_Logout.Size = new System.Drawing.Size(62, 32);
+            this.Btn_Logout.TabIndex = 17;
+            this.Btn_Logout.Text = "Logout";
+            this.Btn_Logout.UseVisualStyleBackColor = true;
+            this.Btn_Logout.Click += new System.EventHandler(this.Btn_Logout_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::CourseManagament.Properties.Resources.invoice;
+            this.pictureBox6.Location = new System.Drawing.Point(18, 286);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(47, 25);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 16;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::CourseManagament.Properties.Resources.homework;
+            this.pictureBox5.Location = new System.Drawing.Point(18, 234);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(47, 25);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 15;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::CourseManagament.Properties.Resources.students;
+            this.pictureBox4.Location = new System.Drawing.Point(18, 185);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(47, 25);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::CourseManagament.Properties.Resources.dashboard_panel;
+            this.pictureBox3.Location = new System.Drawing.Point(18, 131);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(47, 25);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(73, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 23);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Admin";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(17, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(189, 32);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Jude Turaray";
+            // 
+            // Btn_Billing
+            // 
+            this.Btn_Billing.AutoSize = true;
+            this.Btn_Billing.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Billing.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Billing.ForeColor = System.Drawing.Color.White;
+            this.Btn_Billing.Location = new System.Drawing.Point(72, 286);
+            this.Btn_Billing.Name = "Btn_Billing";
+            this.Btn_Billing.Size = new System.Drawing.Size(76, 25);
+            this.Btn_Billing.TabIndex = 12;
+            this.Btn_Billing.Text = "Billing";
+            this.Btn_Billing.Click += new System.EventHandler(this.Btn_Billing_Click);
+            // 
+            // Btn_Dashboard
+            // 
+            this.Btn_Dashboard.AutoSize = true;
+            this.Btn_Dashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Dashboard.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Dashboard.ForeColor = System.Drawing.Color.White;
+            this.Btn_Dashboard.Location = new System.Drawing.Point(72, 131);
+            this.Btn_Dashboard.Name = "Btn_Dashboard";
+            this.Btn_Dashboard.Size = new System.Drawing.Size(126, 25);
+            this.Btn_Dashboard.TabIndex = 9;
+            this.Btn_Dashboard.Text = "Dashboard";
+            this.Btn_Dashboard.Click += new System.EventHandler(this.Btn_Dashboard_Click);
+            // 
+            // Btn_Courses
+            // 
+            this.Btn_Courses.AutoSize = true;
+            this.Btn_Courses.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Courses.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Courses.ForeColor = System.Drawing.Color.White;
+            this.Btn_Courses.Location = new System.Drawing.Point(72, 234);
+            this.Btn_Courses.Name = "Btn_Courses";
+            this.Btn_Courses.Size = new System.Drawing.Size(97, 25);
+            this.Btn_Courses.TabIndex = 11;
+            this.Btn_Courses.Text = "Courses";
+            this.Btn_Courses.Click += new System.EventHandler(this.Btn_Courses_Click);
+            // 
+            // Btn_Student
+            // 
+            this.Btn_Student.AutoSize = true;
+            this.Btn_Student.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btn_Student.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Student.ForeColor = System.Drawing.Color.White;
+            this.Btn_Student.Location = new System.Drawing.Point(72, 185);
+            this.Btn_Student.Name = "Btn_Student";
+            this.Btn_Student.Size = new System.Drawing.Size(105, 25);
+            this.Btn_Student.TabIndex = 10;
+            this.Btn_Student.Text = "Students";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(-2, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1542, 102);
+            this.panel1.TabIndex = 18;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CourseManagament.Properties.Resources.STIpage;
+            this.pictureBox1.Location = new System.Drawing.Point(64, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Lbl_Student
+            // 
+            this.Lbl_Student.AutoSize = true;
+            this.Lbl_Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Student.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Lbl_Student.Location = new System.Drawing.Point(241, 123);
+            this.Lbl_Student.Name = "Lbl_Student";
+            this.Lbl_Student.Size = new System.Drawing.Size(130, 31);
+            this.Lbl_Student.TabIndex = 16;
+            this.Lbl_Student.Text = "Students";
+            // 
+            // Lbl_Enrolled_Student
+            // 
+            this.Lbl_Enrolled_Student.AutoSize = true;
+            this.Lbl_Enrolled_Student.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Lbl_Enrolled_Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Enrolled_Student.Location = new System.Drawing.Point(14, 82);
+            this.Lbl_Enrolled_Student.Name = "Lbl_Enrolled_Student";
+            this.Lbl_Enrolled_Student.Size = new System.Drawing.Size(214, 31);
+            this.Lbl_Enrolled_Student.TabIndex = 24;
+            this.Lbl_Enrolled_Student.Text = "Enrolled Student";
+            this.Lbl_Enrolled_Student.Click += new System.EventHandler(this.Enrolled_Student_panel_Click_1);
+            // 
+            // Lbl_New_Student
+            // 
+            this.Lbl_New_Student.AutoSize = true;
+            this.Lbl_New_Student.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Lbl_New_Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_New_Student.Location = new System.Drawing.Point(36, 71);
+            this.Lbl_New_Student.Name = "Lbl_New_Student";
+            this.Lbl_New_Student.Size = new System.Drawing.Size(177, 62);
+            this.Lbl_New_Student.TabIndex = 23;
+            this.Lbl_New_Student.Text = "New Student \r\n  Application";
+            this.Lbl_New_Student.Click += new System.EventHandler(this.Lbl_New_Student_Click);
+            // 
+            // New_Student_Applicaton_Panel
+            // 
+            this.New_Student_Applicaton_Panel.Controls.Add(this.Lbl_New_Student);
+            this.New_Student_Applicaton_Panel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.New_Student_Applicaton_Panel.Location = new System.Drawing.Point(480, 292);
+            this.New_Student_Applicaton_Panel.Name = "New_Student_Applicaton_Panel";
+            this.New_Student_Applicaton_Panel.Size = new System.Drawing.Size(242, 202);
+            this.New_Student_Applicaton_Panel.TabIndex = 25;
+            this.New_Student_Applicaton_Panel.Click += new System.EventHandler(this.Lbl_New_Student_Click);
+            // 
+            // Enrolled_Student_panel
+            // 
+            this.Enrolled_Student_panel.Controls.Add(this.Lbl_Enrolled_Student);
+            this.Enrolled_Student_panel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Enrolled_Student_panel.Location = new System.Drawing.Point(1020, 292);
+            this.Enrolled_Student_panel.Name = "Enrolled_Student_panel";
+            this.Enrolled_Student_panel.Size = new System.Drawing.Size(242, 202);
+            this.Enrolled_Student_panel.TabIndex = 26;
+            this.Enrolled_Student_panel.Click += new System.EventHandler(this.Enrolled_Student_panel_Click_1);
+            // 
+            // Frm_Student
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1533, 690);
+            this.Controls.Add(this.Enrolled_Student_panel);
+            this.Controls.Add(this.New_Student_Applicaton_Panel);
+            this.Controls.Add(this.Dashboard_Panel);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Lbl_Student);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Name = "Frm_Student";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Frm_Student_Load);
+            this.Dashboard_Panel.ResumeLayout(false);
+            this.Dashboard_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.New_Student_Applicaton_Panel.ResumeLayout(false);
+            this.New_Student_Applicaton_Panel.PerformLayout();
+            this.Enrolled_Student_panel.ResumeLayout(false);
+            this.Enrolled_Student_panel.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel Dashboard_Panel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Btn_Billing;
+        private System.Windows.Forms.Label Btn_Dashboard;
+        private System.Windows.Forms.Label Btn_Courses;
+        private System.Windows.Forms.Label Btn_Student;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label Lbl_Student;
+        private System.Windows.Forms.Label Lbl_Enrolled_Student;
+        private System.Windows.Forms.Label Lbl_New_Student;
+        private System.Windows.Forms.Panel New_Student_Applicaton_Panel;
+        private System.Windows.Forms.Panel Enrolled_Student_panel;
+        private System.Windows.Forms.Button Btn_Logout;
+    }
+}

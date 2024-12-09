@@ -1,0 +1,170 @@
+﻿using CourseManagament.Resources;
+using Login_Admin;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace CourseManagament
+{
+    public partial class Frm_Courses : Form
+    {
+        Color color = ColorTranslator.FromHtml("#0073bd");
+        Color color_profile = ColorTranslator.FromHtml("#2C384A");
+
+        SqlConnection conn = new SqlConnection("Data Source = ZERO; Initial Catalog = AdminDB; Integrated Security = true;");
+        SqlDataAdapter adapterShow;
+        DataTable DT = new DataTable();
+
+        int index;
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+
+
+        public Frm_Courses()
+        {
+            InitializeComponent();
+            
+            panel1.BackColor = color;
+            Btn_Add.ForeColor = Color.White;
+            Btn_Add.BackColor = color_profile;
+            Btn_Delete.ForeColor = Color.White;
+            Btn_Delete.BackColor = color_profile;
+            Dashboard_Panel.BackColor = color_profile;
+            Lbl_Courses.ForeColor = color_profile;
+        }
+        private void Btn_Dashboard_Click(object sender, EventArgs e)
+        {
+            Frm_Dashboard frm_Dashboard = new Frm_Dashboard();
+            frm_Dashboard.FirstName = FirstName;
+            frm_Dashboard.LastName = LastName;
+            this.Hide();
+            frm_Dashboard.ShowDialog();
+            this.Close();
+        }
+
+        private void Btn_Student_Click(object sender, EventArgs e)
+        {
+            Frm_Student frm_Student = new Frm_Student();
+            frm_Student.FirstName = FirstName;
+            frm_Student.LastName = LastName;
+            this.Hide();
+            frm_Student.ShowDialog();
+            this.Close();
+        }
+
+        private void Btn_Billing_Click(object sender, EventArgs e)
+        {
+            Frm_Billing frm_Billing = new Frm_Billing();
+            frm_Billing.FirstName = FirstName;
+            frm_Billing.LastName = LastName;
+            this.Hide();
+            frm_Billing.ShowDialog();
+            this.Close();
+        }
+        private void dataGridView_Courses_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            index = e.RowIndex;
+            if (index >= 0)
+            {
+                DataGridViewRow row = dataGridView_Courses.Rows[e.RowIndex];
+
+                Frm_UpdateProgram frm_UpdateProgram = new Frm_UpdateProgram();
+
+                frm_UpdateProgram.Program_Code = int.TryParse(row.Cells[0].Value?.ToString(), out var programcode) ? programcode : 0;
+                frm_UpdateProgram.Program_Name = row.Cells[1].Value.ToString();
+                frm_UpdateProgram.Program_Capacity = int.TryParse(row.Cells[2].Value?.ToString(), out var programcapacity) ? programcapacity : 0;
+                frm_UpdateProgram.Program_Description = row.Cells[3].Value.ToString();
+
+                frm_UpdateProgram.FirstYear_1stSem = double.TryParse(row.Cells[4].Value.ToString(), out var firsty1) ? firsty1 : 0.0;
+                frm_UpdateProgram.FirstYear_2ndSem = double.TryParse(row.Cells[5].Value.ToString(), out var firsty2) ? firsty2 : 0.0;
+
+                frm_UpdateProgram.SecondYear_1stSem = double.TryParse(row.Cells[6].Value.ToString(), out var secondy1) ? secondy1 : 0.0;
+                frm_UpdateProgram.SecondYear_2ndSem = double.TryParse(row.Cells[7].Value.ToString(), out var secondy2) ? secondy2 : 0.0;
+
+                frm_UpdateProgram.ThirdYear_1stSem = double.TryParse(row.Cells[8].Value.ToString(), out var thirdy1) ? thirdy1 : 0.0;
+                frm_UpdateProgram.ThirdYear_2ndSem = double.TryParse(row.Cells[9].Value.ToString(), out var thirdy2) ? thirdy2 : 0.0;
+
+                frm_UpdateProgram.FourthYear_1stSem = double.TryParse(row.Cells[10].Value.ToString(), out var fourthy1) ? fourthy1 : 0.0;
+                frm_UpdateProgram.FourthYear_2ndSem = double.TryParse(row.Cells[11].Value.ToString(), out var fourthy2) ? fourthy2 : 0.0;
+
+                this.Hide();
+                frm_UpdateProgram.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void Frm_Courses_Load(object sender, EventArgs e)
+        {
+            adapterShow = new SqlDataAdapter("SELECT * FROM Program_Info", conn);
+            adapterShow.Fill(DT);
+            dataGridView_Courses.DataSource = DT;
+
+            label4.Text = $"{FirstName} {LastName}";
+        }
+
+        private void Btn_Add_Click(object sender, EventArgs e)
+        {
+            Frm_AddProgram frm_AddProgram = new Frm_AddProgram();
+            this.Hide();
+            frm_AddProgram.ShowDialog();
+            this.Close();
+        }
+
+        private void Btn_Delete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Courses.SelectedCells.Count > 0)
+            {
+                int index = dataGridView_Courses.CurrentCell.RowIndex;
+
+                var Program_Code = dataGridView_Courses.Rows[index].Cells["Program_Code"].Value;
+
+                var result = MessageBox.Show("Are you sure you want to delete this Course?", "Confirm Delete", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        string deleteQuery = "DELETE FROM Program_Info WHERE Program_Code = @ProgramCode";
+                        using (SqlCommand cmd = new SqlCommand(deleteQuery, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@ProgramCode", Program_Code);
+                            conn.Open();
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                        }
+
+                        dataGridView_Courses.Rows.RemoveAt(index);
+
+                        adapterShow = new SqlDataAdapter("SELECT * FROM Program_Info", conn);
+                        DT.Clear();
+                        adapterShow.Fill(DT);
+                        dataGridView_Courses.DataSource = DT;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error deleting program: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a program to delete.");
+            }
+        }
+
+        private void Btn_Logout_Click(object sender, EventArgs e)
+        {
+            Frm_Login_Admin frm_Login_Admin = new Frm_Login_Admin();
+            this.Hide();
+            frm_Login_Admin.ShowDialog();
+            this.Close();
+        }
+    }
+}

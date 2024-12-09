@@ -1,1 +1,1 @@
-# School-Enrollment-Registration-System-AdminSide
+# CourseManagament
