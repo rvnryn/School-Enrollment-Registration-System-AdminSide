@@ -93,10 +93,6 @@ namespace CourseManagament
             }
         }
 
-
-
-
-
         private void Frm_UpdateProgram_Load(object sender, EventArgs e)
         {
             txt_ProgramCode.Text = Program_Code.ToString();
@@ -154,8 +150,6 @@ namespace CourseManagament
             if (success)
             {
                 MessageBox.Show("Program updated successfully!", "Success");
-
-
                 this.Hide();
                 frm_Courses.ShowDialog();
                 this.Close();

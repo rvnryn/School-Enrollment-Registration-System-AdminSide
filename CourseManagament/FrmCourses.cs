@@ -63,15 +63,6 @@ namespace CourseManagament
             frm_Billing.ShowDialog();
             this.Close();
         }
-
-        private void Lbl_AddProgram_Click(object sender, EventArgs e)
-        {
-            Frm_AddProgram frm_AddProgram = new Frm_AddProgram();
-            this.Hide();
-            frm_AddProgram.ShowDialog();
-            this.Close();
-        }
-
         private void dataGridView_Courses_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             index = e.RowIndex;
